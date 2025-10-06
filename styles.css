@@ -1,0 +1,326 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  transition: background-color 1s, color 1s;
+}
+
+.cv-container {
+  width: 21cm; /* A4 width */
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
+
+header {
+  text-align: center;
+  position: relative;
+}
+
+header img {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+header img.grayscale {
+  filter: grayscale(100%);
+}
+
+#qr-code-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+#qr-code-container.below-face {
+  top: 135px;
+  right: 10px;
+}
+
+section {
+  margin-top: 20px;
+}
+
+h1,
+h2 {
+  color: inherit;
+}
+
+/* Light Mode */
+body.light-mode {
+  background-color: #fff;
+  color: #000;
+}
+
+body.light-mode a {
+  color: #007bff;
+}
+
+body.light-mode svg {
+  fill: #000000;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode a {
+  color: #1e90ff;
+}
+
+body.dark-mode svg {
+  fill: #ffffff;
+}
+
+/* Style 1 */
+.style1 {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Style 2 */
+.style2 {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Style 3 */
+.style3 {
+  font-family: "Lora", serif;
+}
+
+/* Style 4 - Cool Animated Background */
+.style4 {
+  font-family: "Changa One", serif;
+  font-style: normal;
+  font-weight: 900;
+  color: #00ff00;
+}
+
+.animated-background {
+  background: url("./images/stars.gif") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.animated-background svg {
+  fill: #00ff00;
+}
+
+/* Header Alignments */
+.left-align {
+  text-align: left;
+}
+
+.personal-info {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0px 20px;
+}
+
+.center-align {
+  text-align: center;
+}
+
+.center-align .personal-info {
+  width: 70%;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+/* Icon Styling */
+svg {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  fill: currentColor;
+  display: inline-block;
+}
+
+/* QR Code Styling */
+#qr-code-icon svg {
+  height: 100px;
+  width: 100px;
+  vertical-align: middle;
+}
+
+/* Print styles - Replace all existing @media print rules with this */
+@media print {
+  /* Reset container for full print width */
+  body,
+  .cv-container {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    box-sizing: border-box;
+  }
+
+  /* Page setup */
+  @page {
+    margin: 0.5in;
+    size: A4 portrait;
+  }
+
+  /* Allow natural flow for main container */
+  .cv-container,
+  .cv-content {
+    page-break-inside: auto !important;
+    break-inside: auto !important;
+    display: block !important;
+  }
+
+  /* Section spacing and flow */
+  section {
+    margin-bottom: 1.5rem;
+    page-break-inside: auto; /* Allow sections to break if needed */
+    break-inside: auto;
+    orphans: 2; /* Minimum lines at bottom of page */
+    widows: 2; /* Minimum lines at top of page */
+  }
+
+  /* Keep headers with some content */
+  h1,
+  h2,
+  h3 {
+    page-break-after: avoid;
+    break-after: avoid;
+    orphans: 2;
+    widows: 2;
+  }
+
+  /* Allow list items to break naturally */
+  ul,
+  ol {
+    page-break-inside: auto;
+    break-inside: auto;
+  }
+
+  /* Only prevent breaks for short content */
+  li {
+    page-break-inside: auto;
+    break-inside: auto;
+    orphans: 1;
+    widows: 1;
+  }
+
+  /* Font optimization for print */
+  body {
+    font-size: 11pt !important;
+    line-height: 1.3 !important;
+    color: black !important;
+    background: white !important;
+  }
+
+  h1 {
+    font-size: 16pt !important;
+  }
+  h2 {
+    font-size: 14pt !important;
+  }
+  h3 {
+    font-size: 12pt !important;
+  }
+
+  /* Hide interactive elements */
+  .no-print,
+  .personal-detail.hidden {
+    display: none !important;
+  }
+
+  /* Remove visual effects */
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    background-image: none !important;
+  }
+
+  /* Fix icon colors for print */
+  svg {
+    fill: black !important;
+  }
+
+  /* Ensure links are readable */
+  a {
+    color: black !important;
+    text-decoration: underline !important;
+  }
+
+  /* Remove fixed positioning that can cause issues */
+  header img,
+  #qr-code-container {
+    position: static !important;
+    float: right;
+    margin-left: 1rem;
+  }
+
+  /* Print-specific rules for entries */
+  .job-entry,
+  .project-entry,
+  .education-entry {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin-bottom: 1rem;
+  }
+
+  /* Allow breaking for very long entries */
+  .job-entry ul,
+  .project-entry ul {
+    page-break-inside: auto;
+    break-inside: auto;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  /* Add this to your regular CSS */
+  .cv-content {
+    display: block;
+    width: 100%;
+  }
+
+  @media print {
+    .cv-content {
+      display: block !important;
+      page-break-inside: auto;
+      break-inside: auto;
+    }
+  }
+
+  /* Add this to your regular CSS (not inside @media print) */
+  .job-entry,
+  .project-entry,
+  .education-entry {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Better hiding for personal details */
+.personal-detail.hidden {
+  display: none !important;
+}
+
+/* Ensure face image is properly hidden initially */
+header img {
+  display: none;
+}
+
+header img.show {
+  display: block;
+}
+
+/* Smooth transitions for revealing content */
+.personal-detail {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.personal-detail.revealed {
+  opacity: 1;
+}

@@ -1,0 +1,342 @@
+<section>
+  <h2>Projects</h2>
+
+  <div class="project-entry">
+    <h3>Streamlit Application | AI Interviewer Online</h3>
+    <p>Sep 2025 – Present · Built during AI Internship at PanaceaLogics</p>
+    <ul>
+      <li>
+        Built a hardware-agnostic AI interviewer (LLM + STT + TTS) using Streamlit, delegating all heavy workloads to cloud providers (initially OpenAI) to enable low-spec deployment (internship project at PanaceaLogics).
+      </li>
+      <li>
+        Implemented modular service layer (<code>services/llm_service.py</code>, <code>stt_service.py</code>, <code>tts_service.py</code>) decoupled from UI tabs for testability and provider swapping.
+      </li>
+      <li>
+        Designed pluggable provider architecture via environment variables enabling rapid switching of LLM / Speech backends without code changes.
+      </li>
+      <li>
+        Added one-command startup scripts (<code>run.sh</code>, <code>run.bat</code>) that create virtualenv, install dependencies, and launch Streamlit automatically.
+      </li>
+      <li>
+        Established clean separation of concerns: tabs orchestrate I/O; services return structured responses (text, transcription JSON, synthesized audio path/bytes).
+      </li>
+      <li>
+        Emphasized low local footprint: no GPU / model downloads required; suitable for low-spec machines.
+      </li>
+      <li>
+        Roadmapped enhancements: conversation history persistence, scoring rubric, multi-voice TTS enrichment.
+      </li>
+      <li>
+        <strong>Skills:</strong> Python, Streamlit, OpenAI API (LLM/TTS/STT), Modular Architecture, Environment Configuration, Virtual Environments, Cross-Platform Tooling
+      </li>
+      <li>
+        Repo (Online):
+        <a href="https://github.com/ibrahimahtsham/ai-interviewer-online" target="_blank">github.com/ibrahimahtsham/ai-interviewer-online</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="project-entry">
+    <h3>Streamlit Application | AI Interviewer Local (Offline Variant)</h3>
+    <p>Sep 2025 – Present · Built during AI Internship at PanaceaLogics</p>
+    <ul>
+      <li>
+        Developed privacy-focused offline variant (internship deliverable) using Ollama for on-device LLM inference and Faster Whisper for local speech-to-text to ensure data control.
+      </li>
+      <li>
+        Reused shared UI/tab pattern; swapped cloud service clients with local adapters while preserving identical service function signatures.
+      </li>
+      <li>
+        Implemented model warm-load and lazy resource initialization to reduce startup latency and memory usage.
+      </li>
+      <li>
+        Added configurable model selection (e.g., llama3, mistral) plus dynamic temperature and max tokens controls.
+      </li>
+      <li>
+        Integrated streaming token output for real-time interviewer response rendering.
+      </li>
+      <li>
+        Planned local TTS pipeline (edge-tts / Coqui) with graceful fallback to text when voices unavailable.
+      </li>
+      <li>
+        Produced comparative benchmarks (tokens/sec, latency) versus cloud mode to guide deployment choices.
+      </li>
+      <li>
+        <strong>Skills:</strong> Python, Streamlit, Ollama, Faster Whisper, Offline AI, Token Streaming, Performance Optimization, Modular Abstractions
+      </li>
+      <li>
+        Repo (Local):
+        <a href="https://github.com/ibrahimahtsham/ai-interviewer-offline" target="_blank">github.com/ibrahimahtsham/ai-interviewer-offline</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="project-entry">
+    <h3>React + Vite Application | Freelancer Auto Bidder</h3>
+    <p>Aug 2025 – Sep 2025</p>
+    <ul>
+      <li>
+        Developed an automated bidding platform for Freelancer.com with real-time project
+        retrieval, advanced filtering (skills, countries, languages, currencies), and
+        configurable auto-bid rules.
+      </li>
+      <li>
+        Implemented weighted proposal template system for randomized, context-aware bid
+        messages with dynamic variable substitution.
+      </li>
+      <li>
+        Built Settings module for secure API token management, persistent filters, and
+        granular auto-bid behavior controls (cooldowns, budget limits, skill matching).
+      </li>
+      <li>
+        Added Test Utilities page to validate API connectivity, simulate bids, and send
+        custom API requests for debugging and QA.
+      </li>
+      <li>
+        Integrated full API Calls Log with request/response capture, inspection, and export
+        for observability and troubleshooting.
+      </li>
+      <li>
+        Authored Tampermonkey script to automate NDA/IP agreement flows, reducing manual
+        friction in bid submission.
+      </li>
+      <li>
+        <strong>Skills:</strong> React 18, Vite, Material-UI, REST API Integration, Automation,
+        State Management, Proposal Systems, Tampermonkey, JavaScript ES6+
+      </li>
+      <li>
+        Live Demo:
+        <a
+          href="https://ibrahimahtsham.github.io/freelancer-auto-bidder/"
+          target="_blank"
+        >ibrahimahtsham.github.io/freelancer-auto-bidder/</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="project-entry">
+    <h3>Meezan Statement Parser & Expense Tracker</h3>
+    <p>Jun 2025 – Jun 2025</p>
+    <ul>
+      <li>
+        Developed a web application to parse Meezan Bank CSV statements and
+        visualize personal expenses, income, and account trends with interactive
+        charts.
+      </li>
+      <li>
+        Implemented CSV upload, automatic expense categorization, and account
+        overview with summary statistics.
+      </li>
+      <li>
+        Built interactive data visualizations: pie charts for category
+        breakdown, line charts for balance over time, calendar heatmap for daily
+        spending, and bar charts for top expenses and monthly trends.
+      </li>
+      <li>
+        Enabled secure, client-side processing with no third-party data
+        transmission.
+      </li>
+      <li>
+        Provided clear instructions for exporting Meezan Bank statements and
+        getting started with the app.
+      </li>
+      <li>
+        <strong>Skills:</strong> React, Vite, Material UI, Recharts, Chart.js,
+        react-calendar-heatmap, JavaScript ES6+
+      </li>
+      <li>
+        Links:
+        <a
+          href="https://github.com/ibrahimahtsham/meezan-statement-parser-and-expense-tracker"
+          target="_blank"
+        >
+          https://github.com/ibrahimahtsham/meezan-statement-parser-and-expense-tracker
+        </a>
+        |
+        <a
+          href="https://ibrahimahtsham.github.io/meezan-statement-parser-and-expense-tracker/"
+          target="_blank"
+          >https://ibrahimahtsham.github.io/meezan-statement-parser-and-expense-tracker/</a
+        >
+      </li>
+    </ul>
+  </div>
+
+  <div class="project-entry">
+    <h3>React Web Application | ASCII File Structure Viewer</h3>
+    <p>May 2025 – May 2025</p>
+    <ul>
+      <li>
+        Developed a modern web application built with React and Vite that
+        visualizes project file structures with ASCII art and provides
+        comprehensive code statistics.
+      </li>
+      <li>
+        Implemented local folder analysis and GitHub repository integration with
+        real-time API rate limit monitoring and intelligent file processing.
+      </li>
+      <li>
+        Created interactive tree controls with toggle options for file sizes,
+        line counts, color-coded file types, and smart file filtering
+        capabilities.
+      </li>
+      <li>
+        Built comprehensive code analysis features including file type
+        distribution, largest files identification, and processing time metrics.
+      </li>
+      <li>
+        Integrated Material-UI for modern responsive design with dark/light
+        theme switching and real-time progress tracking.
+      </li>
+      <li>
+        Utilized GitHub API with proper rate limiting (60 requests/hour
+        unauthenticated, planning 5,000 with authentication) and error handling.
+      </li>
+      <li>
+        <strong>Skills:</strong> React 18, Vite, Material-UI, GitHub API, File
+        API, JavaScript ES6+, Web APIs
+      </li>
+      <li>
+        Links:
+        <a
+          href="https://github.com/ibrahimahtsham/ascii-file-structure-viewer-web"
+          target="_blank"
+        >
+          https://github.com/ibrahimahtsham/ascii-file-structure-viewer-web
+        </a>
+        |
+        <a
+          href="https://ibrahimahtsham.github.io/ascii-file-structure-viewer-web/"
+          target="_blank"
+        >
+          https://ibrahimahtsham.github.io/ascii-file-structure-viewer-web/
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="project-entry">
+    <h3>React Dashboard Application | Freelancer Client & Project Manager</h3>
+    <p>Apr 2025 – Jun 2025</p>
+    <ul>
+      <li>
+        Built a comprehensive dashboard for freelancers and small teams working
+        on Freelancer.com to manage clients, analyze project data, and track
+        team performance.
+      </li>
+      <li>
+        Developed client management system with automated data fetching from
+        project IDs and personalized message template generation for client
+        communication.
+      </li>
+      <li>
+        Implemented advanced data analysis features including project metrics
+        tracking, bid success rate analysis, and earnings calculations.
+      </li>
+      <li>
+        Created employee management system with custom shift schedules and time
+        breakdown analysis to optimize team productivity.
+      </li>
+      <li>
+        Built interactive data visualizations using Recharts for project
+        analytics, time distribution analysis, and team performance comparisons.
+      </li>
+      <li>
+        Designed salary and commission calculator based on awarded projects and
+        performance metrics with real-time calculations.
+      </li>
+      <li>
+        Ensured privacy and security by implementing client-side only processing
+        with no third-party data transmission except direct Freelancer.com API
+        calls.
+      </li>
+      <li>
+        <strong>Skills:</strong> React, Material-UI, Recharts, React Router,
+        Data Visualization, API Integration, Team Management Systems
+      </li>
+      <li>
+        Links:
+        <a
+          href="https://github.com/ibrahimahtsham/freelancer-client-info-grabber"
+          target="_blank"
+        >
+          https://github.com/ibrahimahtsham/freelancer-client-info-grabber
+        </a>
+        |
+        <a
+          href="https://ibrahimahtsham.github.io/freelancer-client-info-grabber/"
+          target="_blank"
+        >
+          https://ibrahimahtsham.github.io/freelancer-client-info-grabber/
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="project-entry">
+    <h3>React Native Application | SwiftRent</h3>
+    <p>Sep 2023 – Jun 2024</p>
+    <ul>
+      <li>
+        Developed and maintain "SwiftRent," a mobile application built using
+        React Native.
+      </li>
+      <li>
+        Proficiency in React Native framework, employing hooks, implementing
+        color schemes, and integrating multiple language support.
+      </li>
+      <li>
+        Managed large-scale applications using effective task decomposition
+        strategies.
+      </li>
+      <li>
+        Used conditional rendering to dynamically display forms and implemented
+        a custom graph feature with drag functionality.
+      </li>
+      <li>
+        Links:
+        <a
+          href="https://github.com/anasahtsham/swift-rent-mobile"
+          target="_blank"
+        >
+          https://github.com/anasahtsham/swift-rent-mobile
+        </a>
+        |
+        <a href="https://swiftrent.in.ngrok.io" target="_blank">
+          https://swiftrent.in.ngrok.io
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="project-entry">
+    <h3>React.js Website | SwiftRent Admin Panel</h3>
+    <p>Sep 2023 – Jun 2024</p>
+    <ul>
+      <li>
+        Designed and developed the admin panel for "SwiftRent" using React.js.
+      </li>
+      <li>
+        Created reusable components, such as buttons and data tables, to enhance
+        user experience and efficiency.
+      </li>
+      <li>
+        Implemented Material UI for consistent UI/UX and supported dark/light
+        themes.
+      </li>
+      <li>
+        Integrated APIs to fetch and display data securely with authentication
+        logic.
+      </li>
+      <li>
+        Link:
+        <a
+          href="https://github.com/ibrahimahtsham/swift-rent-admin"
+          target="_blank"
+        >
+          https://github.com/ibrahimahtsham/swift-rent-admin
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
