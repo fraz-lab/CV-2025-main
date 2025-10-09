@@ -2,149 +2,123 @@
   <h2>Projects</h2>
 
   <div class="project-entry">
-    <h3>Streamlit Application | AI Interviewer Online</h3>
-    <p>Sep 2025 – Present · Built during AI Internship at PanaceaLogics</p>
+    <h3>Computer Vision System | Horse Conformation Analysis</h3>
+    <p> Research Project in AI & Biomechanics</p>
     <ul>
       <li>
-        Built a hardware-agnostic AI interviewer (LLM + STT + TTS) using Streamlit, delegating all heavy workloads to cloud providers (initially OpenAI) to enable low-spec deployment (internship project at PanaceaLogics).
+       Explored computer vision methods to analyze horse body conformation and assess race performance potential.
       </li>
       <li>
-        Implemented modular service layer (<code>services/llm_service.py</code>, <code>stt_service.py</code>, <code>tts_service.py</code>) decoupled from UI tabs for testability and provider swapping.
+        Developed image annotation tools to label anatomical keypoints and body segments.
       </li>
       <li>
-        Designed pluggable provider architecture via environment variables enabling rapid switching of LLM / Speech backends without code changes.
+     Collected and preprocessed a dataset of horse images for pose and angle estimation.
       </li>
       <li>
-        Added one-command startup scripts (<code>run.sh</code>, <code>run.bat</code>) that create virtualenv, install dependencies, and launch Streamlit automatically.
+        Applied OpenCV and Mediapipe for anatomical keypoint detection and body structure measurements
       </li>
       <li>
-        Established clean separation of concerns: tabs orchestrate I/O; services return structured responses (text, transcription JSON, synthesized audio path/bytes).
+        Experimented with regression-based models to relate body angles with performance factors.
+
       </li>
+      
       <li>
-        Emphasized low local footprint: no GPU / model downloads required; suitable for low-spec machines.
-      </li>
-      <li>
-        Roadmapped enhancements: conversation history persistence, scoring rubric, multi-voice TTS enrichment.
-      </li>
-      <li>
-        <strong>Skills:</strong> Python, Streamlit, OpenAI API (LLM/TTS/STT), Modular Architecture, Environment Configuration, Virtual Environments, Cross-Platform Tooling
-      </li>
-      <li>
+        <strong>Skills:</strong> Skills: Python, OpenCV, Mediapipe, Regression Models, Image Annotation, Data Analysis
+      <!-- <li>
         Repo (Online):
         <a href="https://github.com/ibrahimahtsham/ai-interviewer-online" target="_blank">github.com/ibrahimahtsham/ai-interviewer-online</a>
-      </li>
+      </li> -->
     </ul>
   </div>
 
   <div class="project-entry">
-    <h3>Streamlit Application | AI Interviewer Local (Offline Variant)</h3>
-    <p>Sep 2025 – Present · Built during AI Internship at PanaceaLogics</p>
+    <h3>LLM-Based Chatbot | Retrieval-Augmented Generation (RAG)</h3>
+    <p>Independent Research on Knowledge-Based Systems</p>
     <ul>
       <li>
-        Developed privacy-focused offline variant (internship deliverable) using Ollama for on-device LLM inference and Faster Whisper for local speech-to-text to ensure data control.
+        Implemented a knowledge-grounded chatbot using LangFlow, ChromaDB, and OpenAI embeddings.
       </li>
       <li>
-        Reused shared UI/tab pattern; swapped cloud service clients with local adapters while preserving identical service function signatures.
+       Experimented with retrieval-augmented generation (RAG) to enhance factual accuracy in dialogue.
       </li>
       <li>
-        Implemented model warm-load and lazy resource initialization to reduce startup latency and memory usage.
+        Tested various embedding models and prompt templates for domain-specific retrieval efficiency.
       </li>
       <li>
-        Added configurable model selection (e.g., llama3, mistral) plus dynamic temperature and max tokens controls.
+        Evaluated response quality through context relevance, factual consistency, and token economy.
       </li>
+      
       <li>
-        Integrated streaming token output for real-time interviewer response rendering.
+        <strong>Skills:</strong>Python, LangFlow, OpenAI API, ChromaDB, RAG Pipelines, Prompt Engineering, Vector Search
       </li>
-      <li>
-        Planned local TTS pipeline (edge-tts / Coqui) with graceful fallback to text when voices unavailable.
-      </li>
-      <li>
-        Produced comparative benchmarks (tokens/sec, latency) versus cloud mode to guide deployment choices.
-      </li>
-      <li>
-        <strong>Skills:</strong> Python, Streamlit, Ollama, Faster Whisper, Offline AI, Token Streaming, Performance Optimization, Modular Abstractions
-      </li>
-      <li>
+      <!-- <li>
         Repo (Local):
         <a href="https://github.com/ibrahimahtsham/ai-interviewer-offline" target="_blank">github.com/ibrahimahtsham/ai-interviewer-offline</a>
-      </li>
+      </li> -->
     </ul>
   </div>
 
   <div class="project-entry">
-    <h3>React + Vite Application | Freelancer Auto Bidder</h3>
-    <p>Aug 2025 – Sep 2025</p>
+    <h3>Stereo Vision Research | Aquaculture Biomass Estimation</h3>
+    <p>Vision & Depth Analysis Study</p>
     <ul>
       <li>
-        Developed an automated bidding platform for Freelancer.com with real-time project
-        retrieval, advanced filtering (skills, countries, languages, currencies), and
-        configurable auto-bid rules.
+        Designed a stereo camera setup for estimating fish length and biomass through depth computation.
       </li>
       <li>
-        Implemented weighted proposal template system for randomized, context-aware bid
-        messages with dynamic variable substitution.
+        Used stereo calibration and triangulation to obtain 3D positional data in controlled environments.
       </li>
       <li>
-        Built Settings module for secure API token management, persistent filters, and
-        granular auto-bid behavior controls (cooldowns, budget limits, skill matching).
+        Built a prototype for real-time measurement and tracking of fish using contour and keypoint analysis.
       </li>
       <li>
-        Added Test Utilities page to validate API connectivity, simulate bids, and send
-        custom API requests for debugging and QA.
+        Focused on precision, environmental noise handling, and low-cost camera adaptation.
       </li>
-      <li>
+      <!-- <li>
         Integrated full API Calls Log with request/response capture, inspection, and export
         for observability and troubleshooting.
       </li>
       <li>
         Authored Tampermonkey script to automate NDA/IP agreement flows, reducing manual
         friction in bid submission.
-      </li>
+      </li> -->
       <li>
-        <strong>Skills:</strong> React 18, Vite, Material-UI, REST API Integration, Automation,
-        State Management, Proposal Systems, Tampermonkey, JavaScript ES6+
-      </li>
+        <strong>Skills:</strong> RComputer Vision, Stereo Calibration, Depth Estimation, Python, OpenCV
+      <!-- </li>
       <li>
         Live Demo:
         <a
           href="https://ibrahimahtsham.github.io/freelancer-auto-bidder/"
           target="_blank"
         >ibrahimahtsham.github.io/freelancer-auto-bidder/</a>
-      </li>
+      </li> -->
     </ul>
   </div>
 
   <div class="project-entry">
-    <h3>Meezan Statement Parser & Expense Tracker</h3>
-    <p>Jun 2025 – Jun 2025</p>
+    <h3>Voice AI Prototype | Autonomous Interviewer</h3>
+    <p>Applied Research on Voice Interaction Systems</p>
     <ul>
       <li>
-        Developed a web application to parse Meezan Bank CSV statements and
-        visualize personal expenses, income, and account trends with interactive
-        charts.
+       Developed a prototype AI interviewer combining LLMs, speech-to-text (STT), and text-to-speech (TTS) models.
       </li>
       <li>
         Implemented CSV upload, automatic expense categorization, and account
         overview with summary statistics.
       </li>
       <li>
-        Built interactive data visualizations: pie charts for category
-        breakdown, line charts for balance over time, calendar heatmap for daily
-        spending, and bar charts for top expenses and monthly trends.
+        Created both cloud-based (OpenAI) and local (Ollama + Faster Whisper) versions for comparison.
       </li>
       <li>
-        Enabled secure, client-side processing with no third-party data
-        transmission.
+        Implemented modular components for LLM, STT, and TTS services, allowing flexible backend testing.
       </li>
       <li>
-        Provided clear instructions for exporting Meezan Bank statements and
-        getting started with the app.
+        Explored token streaming and real-time conversation flow for natural interaction.
       </li>
       <li>
-        <strong>Skills:</strong> React, Vite, Material UI, Recharts, Chart.js,
-        react-calendar-heatmap, JavaScript ES6+
+        <strong>Skills:</strong> RPython, Streamlit, OpenAI API, Ollama, Faster Whisper, Token Streaming, Modular Architecture
       </li>
-      <li>
+      <!-- <li>
         Links:
         <a
           href="https://github.com/ibrahimahtsham/meezan-statement-parser-and-expense-tracker"
@@ -158,71 +132,62 @@
           target="_blank"
           >https://ibrahimahtsham.github.io/meezan-statement-parser-and-expense-tracker/</a
         >
-      </li>
+      </li> -->
     </ul>
   </div>
 
   <div class="project-entry">
-    <h3>React Web Application | ASCII File Structure Viewer</h3>
-    <p>May 2025 – May 2025</p>
+    <h3>Real-Time AI Voice Agent | Conversational AI Prototype</h3>
+    <p>esearch on Speech Synthesis & Dialogue Systems</p>
     <ul>
       <li>
-        Developed a modern web application built with React and Vite that
-        visualizes project file structures with ASCII art and provides
-        comprehensive code statistics.
+        Created a real-time conversational agent capable of live voice interaction using Twilio and Eleven Labs APIs.
       </li>
       <li>
-        Implemented local folder analysis and GitHub repository integration with
-        real-time API rate limit monitoring and intelligent file processing.
+        Integrated speech recognition (STT), VAD (Voice Activity Detection), and TTS modules for fluid response.
       </li>
       <li>
-        Created interactive tree controls with toggle options for file sizes,
-        line counts, color-coded file types, and smart file filtering
-        capabilities.
+       Experimented with FastAPI for handling concurrent requests and streaming responses.
       </li>
       <li>
-        Built comprehensive code analysis features including file type
-        distribution, largest files identification, and processing time metrics.
+        Focused on exploring human-like dialogue pacing and latency optimization.
       </li>
-      <li>
+      <!-- <li>
         Integrated Material-UI for modern responsive design with dark/light
         theme switching and real-time progress tracking.
       </li>
       <li>
         Utilized GitHub API with proper rate limiting (60 requests/hour
         unauthenticated, planning 5,000 with authentication) and error handling.
-      </li>
+      </li> -->
       <li>
-        <strong>Skills:</strong> React 18, Vite, Material-UI, GitHub API, File
-        API, JavaScript ES6+, Web APIs
+        <strong>Skills:</strong>Twilio, Eleven Labs, Speech Synthesis, Real-Time Communication, Python
       </li>
       <li>
         Links:
         <a
-          href="https://github.com/ibrahimahtsham/ascii-file-structure-viewer-web"
+          href="https://github.com/fraz-lab/twillio_elevenLAbs"
           target="_blank"
         >
-          https://github.com/ibrahimahtsham/ascii-file-structure-viewer-web
+          https://github.com/fraz-lab/twillio_elevenLAbs
         </a>
         |
-        <a
+        <!-- <a
           href="https://ibrahimahtsham.github.io/ascii-file-structure-viewer-web/"
           target="_blank"
         >
           https://ibrahimahtsham.github.io/ascii-file-structure-viewer-web/
-        </a>
+        </a> -->
       </li>
     </ul>
   </div>
 
   <div class="project-entry">
-    <h3>React Dashboard Application | Freelancer Client & Project Manager</h3>
-    <p>Apr 2025 – Jun 2025</p>
+    <h3>Car Simulator Prototype</h3>
+    <p>Game Development Prototype</p>
     <ul>
       <li>
-        Built a comprehensive dashboard for freelancers and small teams working
-        on Freelancer.com to manage clients, analyze project data, and track
-        team performance.
+        Developed a car simulation prototype using Unity3D, leveraging pre-built car simulation toolkits and
       </li>
       <li>
         Developed client management system with automated data fetching from
@@ -230,113 +195,138 @@
         communication.
       </li>
       <li>
-        Implemented advanced data analysis features including project metrics
-        tracking, bid success rate analysis, and earnings calculations.
+        modifying them to match custom driving dynamics and physics requirements..
       </li>
       <li>
-        Created employee management system with custom shift schedules and time
-        breakdown analysis to optimize team productivity.
+        Focused on vehicle control tuning, camera systems, and terrain setup for realistic testing and gameplay.
       </li>
       <li>
-        Built interactive data visualizations using Recharts for project
-        analytics, time distribution analysis, and team performance comparisons.
+        Explored car handling mechanics, optimizing the prototype for smooth motion and responsiveness.
+      </li>
+      
+        <strong>Skills:</strong> Unity, C#, Game Mechanics, Vehicle Simulation, Physics Adjustment
       </li>
       <li>
-        Designed salary and commission calculator based on awarded projects and
-        performance metrics with real-time calculations.
+        
+    </ul>
+  </div>
+
+  <div class="project-entry">
+    <h3>Truck Simulator Project</h3>
+    <p>Full Game Development Project</p>
+    <ul>
+      <li>
+       Led development of a full-scale truck driving simulator featuring 130+ missions, dynamic weather and time systems, and multiple gameplay modes — including Career, Free Drive, Time Trial, and Camping Mode.
       </li>
       <li>
-        Ensured privacy and security by implementing client-side only processing
-        with no third-party data transmission except direct Freelancer.com API
-        calls.
+       Implemented an interactive menu and UI system, optimized game mechanics, and integrated Unity animations for smooth visual transitions.
       </li>
       <li>
-        <strong>Skills:</strong> React, Material-UI, Recharts, React Router,
-        Data Visualization, API Integration, Team Management Systems
+      Developed custom map system and environmental effects to enhance realism and player immersion.
       </li>
       <li>
-        Links:
-        <a
-          href="https://github.com/ibrahimahtsham/freelancer-client-info-grabber"
-          target="_blank"
-        >
-          https://github.com/ibrahimahtsham/freelancer-client-info-grabber
-        </a>
-        |
-        <a
-          href="https://ibrahimahtsham.github.io/freelancer-client-info-grabber/"
-          target="_blank"
-        >
-          https://ibrahimahtsham.github.io/freelancer-client-info-grabber/
-        </a>
+        Focused on vehicle physics, AI traffic behavior, and mission scripting to create engaging gameplay experiences.
       </li>
     </ul>
   </div>
 
   <div class="project-entry">
-    <h3>React Native Application | SwiftRent</h3>
-    <p>Sep 2023 – Jun 2024</p>
+    <h3>Realtor.com Agent Scraper</h3>
+    <p>Web Automation & Data Extraction Project</p>
     <ul>
       <li>
-        Developed and maintain "SwiftRent," a mobile application built using
-        React Native.
+        Developed a Streamlit-based real estate data scraping system to extract agent details (names and phone numbers) from Realtor.com using Selenium and undetected_chromedriver.
       </li>
       <li>
-        Proficiency in React Native framework, employing hooks, implementing
-        color schemes, and integrating multiple language support.
+        Implemented a keyword-based search (e.g., miami_fl) with support for multi-page scraping and configurable limits..
       </li>
       <li>
-        Managed large-scale applications using effective task decomposition
-        strategies.
+      Built a user-friendly Streamlit interface allowing users to start, monitor, and cancel scraping in real-time.
       </li>
       <li>
-        Used conditional rendering to dynamically display forms and implemented
-        a custom graph feature with drag functionality.
+        Integrated robust error handling for network timeouts, bot detections, and dynamic content loading.
+      </li>
+      <li>
+       Designed a robust workflow to handle missing fields gracefully and skip irrelevant files.
+      </li>
+      <li>
+      Designed an automated CSV export pipeline storing scraped data with columns for keyword, name, phone number, and status (new/old).
+      <li>
+      <li>
+     Added detailed debugging support, including log files, screenshots, and HTML page source captures for troubleshooting.
+      <li>
+        <li>
+     Optimized scraping behavior using adjustable timing configurations to balance speed and reliability.
+      <li>
+        <li>
+     This project streamlined data collection for real estate leads and provided a reusable framework for web data automation tasks.
+      <li>
+        <strong>Skills:</strong>Python, Streamlit, Selenium, Undetected-Chromedriver, Web Scraping, Data Automation, CSV Handling, Error Handling, UI Design
       </li>
       <li>
         Links:
         <a
-          href="https://github.com/anasahtsham/swift-rent-mobile"
+          href="https://github.com/fraz-lab/scrapper"
           target="_blank"
         >
-          https://github.com/anasahtsham/swift-rent-mobile
+          https://github.com/fraz-lab/scrapper
         </a>
         |
-        <a href="https://swiftrent.in.ngrok.io" target="_blank">
-          https://swiftrent.in.ngrok.io
-        </a>
+        <!-- <a
+          href="https://ibrahimahtsham.github.io/ascii-file-structure-viewer-web/"
+          target="_blank"
+        >
+          https://ibrahimahtsham.github.io/ascii-file-structure-viewer-web/
+        </a> -->
       </li>
     </ul>
   </div>
+  
 
   <div class="project-entry">
-    <h3>React.js Website | SwiftRent Admin Panel</h3>
-    <p>Sep 2023 – Jun 2024</p>
+    <h3>PDF Data Extraction & Invoice Automation System</h3>
+    <p>Applied Automation Project</p>
     <ul>
       <li>
-        Designed and developed the admin panel for "SwiftRent" using React.js.
+        Developed a Python-based PDF parsing system to extract structured invoice data from semi-structured business documents.
       </li>
       <li>
-        Created reusable components, such as buttons and data tables, to enhance
-        user experience and efficiency.
+        Used pdfplumber for text extraction and regex (re library) to accurately capture invoice numbers, dates, totals, and GST from Brandz invoices.
       </li>
       <li>
-        Implemented Material UI for consistent UI/UX and supported dark/light
-        themes.
+       Implemented a data validation and formatting pipeline that normalized extracted data (e.g., reformatted invoice dates).
       </li>
       <li>
-        Integrated APIs to fetch and display data securely with authentication
-        logic.
+        Automated result compilation into Excel (.xlsx) using OpenPyXL, generating clean tabular outputs for analysis.
       </li>
       <li>
-        Link:
+       Designed a robust workflow to handle missing fields gracefully and skip irrelevant files.
+      </li>
+      <li>
+       This system significantly reduced manual data entry time and improved reliability in invoice reconciliation.
+      </li>
+      <li>
+        <strong>Skills:</strong>Python, pdfplumber, Regular Expressions (Regex), OpenPyXL, Automation, Data Extraction, File Handling
+      </li>
+      <li>
+        Links:
         <a
-          href="https://github.com/ibrahimahtsham/swift-rent-admin"
+          href="https://github.com/fraz-lab/invoice_project"
           target="_blank"
         >
-          https://github.com/ibrahimahtsham/swift-rent-admin
+          https://github.com/fraz-lab/invoice_project
         </a>
+        |
+        <!-- <a
+          href="https://ibrahimahtsham.github.io/ascii-file-structure-viewer-web/"
+          target="_blank"
+        >
+          https://ibrahimahtsham.github.io/ascii-file-structure-viewer-web/
+        </a> -->
       </li>
+    </ul>
+  </div>
+  
     </ul>
   </div>
 </section>

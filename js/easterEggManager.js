@@ -54,54 +54,80 @@ class EasterEggManager {
   }
 
   static revealPersonalDetails() {
-    const personalDetails = document.querySelectorAll(".personal-detail");
-    const faceImage = document.querySelector("header img");
+  const personalDetails = document.querySelectorAll(".personal-detail");
+  const faceImage = document.querySelector("header img");
+  const qrContainer = document.getElementById("qr-code-container");
 
-    personalDetails.forEach((element) => {
-      element.classList.remove("hidden");
-      element.classList.add("revealed");
-    });
+  personalDetails.forEach((element) => {
+    element.classList.remove("hidden");
+    element.classList.add("revealed");
+  });
 
-    if (faceImage) {
-      faceImage.style.display = "block";
-      faceImage.classList.add("show");
-    }
-
-    const qrContainer = document.getElementById("qr-code-container");
-    if (qrContainer) {
-      qrContainer.classList.add("below-face");
-    }
-
-    this.isPersonalDetailsRevealed = true;
-
-    // Optional: Show a subtle notification
-    this.showNotification("Personal details revealed! 🔓");
+  if (faceImage) {
+    faceImage.style.display = "block";
+    faceImage.classList.add("show");
   }
+
+  // Hide QR code when personal details are revealed
+  if (qrContainer) {
+    qrContainer.style.display = "none";
+  }
+
+  this.isPersonalDetailsRevealed = true;
+
+  this.showNotification("Personal details revealed! 🔓");
+}
+
+static hidePersonalDetails() {
+  const personalDetails = document.querySelectorAll(".personal-detail");
+  const faceImage = document.querySelector("header img");
+  const qrContainer = document.getElementById("qr-code-container");
+
+  personalDetails.forEach((element) => {
+    element.classList.add("hidden");
+    element.classList.remove("revealed");
+  });
+
+  if (faceImage) {
+    faceImage.style.display = "none";
+    faceImage.classList.remove("show");
+  }
+
+  // Show QR code again when hiding personal details
+  if (qrContainer) {
+    qrContainer.style.display = "block";
+  }
+
+  this.isPersonalDetailsRevealed = false;
+
+  this.showNotification("Personal details hidden! 🔒");
+}
+
 
   static hidePersonalDetails() {
-    const personalDetails = document.querySelectorAll(".personal-detail");
-    const faceImage = document.querySelector("header img");
+  const personalDetails = document.querySelectorAll(".personal-detail");
+  const faceImage = document.querySelector("header img");
+  const qrContainer = document.getElementById("qr-code-container");
 
-    personalDetails.forEach((element) => {
-      element.classList.add("hidden");
-      element.classList.remove("revealed");
-    });
+  personalDetails.forEach((element) => {
+    element.classList.add("hidden");
+    element.classList.remove("revealed");
+  });
 
-    if (faceImage) {
-      faceImage.style.display = "none";
-      faceImage.classList.remove("show");
-    }
-
-    const qrContainer = document.getElementById("qr-code-container");
-    if (qrContainer) {
-      qrContainer.classList.remove("below-face");
-    }
-
-    this.isPersonalDetailsRevealed = false;
-
-    // Optional: Show a subtle notification
-    this.showNotification("Personal details hidden! 🔒");
+  if (faceImage) {
+    faceImage.style.display = "none";
+    faceImage.classList.remove("show");
   }
+
+  // Show QR code again when hiding personal details
+  if (qrContainer) {
+    qrContainer.style.display = "block";
+  }
+
+  this.isPersonalDetailsRevealed = false;
+
+  this.showNotification("Personal details hidden! 🔒");
+}
 
   static showNotification(message) {
     // Create a temporary notification element

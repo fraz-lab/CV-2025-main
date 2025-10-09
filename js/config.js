@@ -26,18 +26,9 @@ const CONFIG = {
   },
 
   easterEggs: {
-    personalDetails: ["Numpad7", "Numpad6", "Numpad6", "Numpad7"],
+    personalDetails: ["Numpad1", "Numpad0"],
     konami: [
-      "ArrowUp",
-      "ArrowUp",
-      "ArrowDown",
-      "ArrowDown",
-      "ArrowLeft",
-      "ArrowRight",
-      "ArrowLeft",
-      "ArrowRight",
-      "b",
-      "a",
+      "c","t"
     ],
   },
 };

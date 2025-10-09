@@ -310,7 +310,14 @@ svg {
 /* Ensure face image is properly hidden initially */
 header img {
   display: none;
+  position: absolute;
+  top: -10px; /* move 10px upward */
+  right: 10px;
+  width: 100px;
+  border-radius: 50%;
+  object-fit: cover;
 }
+
 
 header img.show {
   display: block;
