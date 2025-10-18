@@ -4,7 +4,7 @@ const CONFIG = {
   sections: [
     { file: "sections/intro.html", target: "intro-section" },
     { file: "sections/experience.html", target: "experience-section" },
-    // { file: "sections/projects.html", target: "projects-section" },
+    { file: "sections/projects.html", target: "projects-section" },
     { file: "sections/education.html", target: "education-section" },
     { file: "sections/skills.html", target: "skills-section" },
     { file: "sections/languages.html", target: "languages-section" },
