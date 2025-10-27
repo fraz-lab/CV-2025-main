@@ -5,9 +5,10 @@ body {
 }
 
 .cv-container {
-  width: 50cm; /* A4 width */
+  width: 21cm; /* True A4 width */
+  max-width: 100%;
   margin: 0 auto;
-  padding: 50px;
+  padding: 2cm;
   border: 1px solid #000;
   box-sizing: border-box;
 }
