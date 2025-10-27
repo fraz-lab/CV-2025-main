@@ -5,7 +5,7 @@ body {
 }
 
 .cv-container {
-  width: 21cm; /* True A4 width */
+  width: 30cm; /* True A4 width */
   max-width: 100%;
   margin: 0 auto;
   padding: 2cm;
